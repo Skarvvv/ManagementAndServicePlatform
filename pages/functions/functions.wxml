@@ -1,0 +1,12 @@
+<!--pages/main/main.wxml-->
+
+<!-- 九宫格区域 -->
+<view class="grid-list">
+  <navigator class="grid-item" wx:for="{{gridList}}" wx:key="id" url="../../{{item.toPath}}">
+    <image src="{{item.iconSrc}}"></image>
+    <text>{{item.gridName}}</text>
+  </navigator>
+</view>
+
+
+

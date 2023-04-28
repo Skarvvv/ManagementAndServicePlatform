@@ -1,0 +1,19 @@
+<!--pages/home/home.wxml-->
+<!-- 轮播图 -->
+<swiper indicator-dots circular>
+  <swiper-item wx:for="{{swiperList}}" wx:key="id">
+    <image src="{{item.imageSrc}}"></image>
+  </swiper-item>
+</swiper>
+
+<view class="shop-item" wx:for="{{newsList}}" wx:key="nid" bindtap="toNewsDetailPage" data-nid="{{item.nid}}">
+  <view class="thumb">
+    <image src="{{item.nimg}}"></image>
+  </view>
+  <view class="info">
+    <text class="ncontentStyle shop-title" >{{item.nname}}</text>
+    <text>Time：{{item.ntime}}</text>
+    <text>Doctor：{{item.dname}}</text>
+    <text style="color: gray;" class="ncontentStyle textMargin">{{item.ncontent}}</text>
+  </view>
+</view>

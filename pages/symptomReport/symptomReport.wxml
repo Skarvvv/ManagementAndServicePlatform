@@ -1,0 +1,17 @@
+<!--pages/symptomReport/symptomReport.wxml-->
+<view class="titleView">Symptom Report</view>
+
+Time:<picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+    <input value='{{time}}' placeholder='choose the time'/>
+</picker>
+Content:<input type="text" placeholder="input your symptom please" maxlength="1000" bindinput="updateSymptom" />
+<button style="margin: 10% 0" bindtap="submitSymptomReport">submit</button>
+
+<view class="shop-item" wx:for="{{symptomReports}}" wx:key="sid">
+  <view class="info">
+    <text class="shop-title">{{item.stime}}</text>
+    <text>content: {{item.symptomContent}}</text>
+  </view>
+</view>
+
+

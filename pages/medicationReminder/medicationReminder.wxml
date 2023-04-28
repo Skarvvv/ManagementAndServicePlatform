@@ -1,0 +1,16 @@
+<!--pages/medicationReminder/medicationReminder.wxml-->
+<view class="titleView">Medication Reminder</view>
+
+<button style="color: gray;" bindtap="addMedicine"> + add medicine</button>
+<view class="shop-item" wx:for="{{medicinesSelected}}" wx:key="mid">
+  <view class="thumb">
+    <image src="{{item.mimage}}"></image>
+  </view>
+  <view class="info">
+    <text class="shop-title">{{item.mname}}</text>
+    <text>times：{{item.mtimes}}</text>
+    <text>dosage：{{item.mdosage}}</text>
+    <text>description：{{item.mdescription}}</text>
+  </view>
+</view>
+

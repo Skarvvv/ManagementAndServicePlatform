@@ -1,0 +1,33 @@
+<!--pages/followUpSchedule/followUpSchedule.wxml-->
+
+<view class="titleView">Follow-up Schedule</view>
+
+
+<!-- <view class="item">
+  choose the doctor please: -->
+  <!-- 通过点击事件改变图片的旋转角度、自定义下拉框的高度 -->
+  <!-- <view class="value" bindtap="select">
+    <view style="display:inline-block;">{{did==''?'choose the doctor':drealname}}</view> -->
+    <!-- select -->
+    <!-- <view class="select" style="{{isSelect?'height:'+54*doctors.length+'rpx;':'border:0'}}">
+      <view class="type" catchtap="getType" wx:for="{{doctors}}" data-did="{{item.did}}" data-drealname="{{item.drealname}}" wx:key="did">{{item.drealname}}</view>
+    </view>
+  </view>
+</view>
+
+
+description:<input type="text" bindinput="updateFcontent" placeholder="describe your condition please" />
+time:<picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+    <input value='{{time}}' placeholder='choose the time'/>
+</picker>
+
+<button bindtap="submitFollowUpSchedule">submit</button> -->
+
+<view class="shop-item" wx:for="{{followUpSchedules}}" wx:key="fid">
+  <view class="info">
+    <text class="shop-title">time: {{item.ftime}}</text>
+    <text class="shop-title">doctor-name: {{item.dname}}</text>
+    <text>content: {{item.fcontent}}</text>
+  </view>
+</view>
+

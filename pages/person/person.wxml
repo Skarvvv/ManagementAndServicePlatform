@@ -1,0 +1,23 @@
+<!--pages/person/person.wxml-->
+
+<view class="container">
+
+<view class="info-box">
+  <view style="text-align: center;margin-bottom:20%;">
+    <image class="avatar-img" mode="aspectFill" src="{{userInfo.uavatar}}" />
+  </view>
+
+  <text decode="{{true}}">name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;{{userInfo.uname}}</text>
+  <text decode="{{true}}">gender&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;{{userInfo.ugender}}</text>
+  <text decode="{{true}}">telephone&nbsp;:&nbsp;&nbsp;{{userInfo.utel}}</text>
+  <text decode="{{true}}">real-name&nbsp;:&nbsp;&nbsp;{{userInfo.urealname}}</text>
+  <text decode="{{true}}">identity&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;{{userInfo.uidentity}}</text>
+  <text decode="{{true}}">birthday&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;{{userInfo.ubirthday}}</text>
+</view>
+
+<view style="margin-top:10%"> 
+  <button style="margin: 30rpx auto;" bindtap="toUpdateInformation">update information</button>
+  <button bindtap="toUpdatePassword">update password</button>
+</view>
+
+</view>

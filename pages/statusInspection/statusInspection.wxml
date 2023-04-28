@@ -1,0 +1,23 @@
+<!--pages/statusInspection/statusInspection.wxml-->
+
+<view class="titleView">Status Inspection</view>
+
+description:<input type="text" bindinput="updateStatusContent" placeholder="input the description of your status please" />
+time:<picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+    <input value='{{time}}' placeholder='choose the time'/>
+</picker>
+lowest temperature:<input type="text" bindinput="updateLowTemp" placeholder="input your lowest temperature nearly" />
+highest temperature:<input type="text" bindinput="updateHighTemp" placeholder="input your Highest temperature nearly" />
+current temperature:<input type="text" bindinput="updateCurrentTemp" placeholder="input your current temperature" />
+
+<button bindtap="submitStatusInspection">submit</button>
+
+<view class="shop-item" wx:for="{{statusInspections}}" wx:key="sid">
+  <view class="info">
+    <text class="shop-title">time:{{item.stime}}</text>
+    <text class="shop-title">the lowest temperature:{{item.lowTemp}}</text>
+    <text class="shop-title">the highest temperature:{{item.highTemp}}</text>
+    <text class="shop-title">temperature at that time:{{item.currentTemp}}</text>
+    <text style="color: gray;">{{item.statusContent}}</text>
+  </view>
+</view>

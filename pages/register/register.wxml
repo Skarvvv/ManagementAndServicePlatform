@@ -1,0 +1,83 @@
+<!--pages/register/register.wxml-->
+
+<view class="v1">
+ <!-- v2父容器  子view使用绝对布局 -->
+   <view class="v2">
+     <view class="dltext">register</view>
+
+    <view class="imageCs">
+     <image src="{{images.length==0?'/imgs/icon/avatar.png':images[0]}}" bindtap="chooseImage" class="imgIcon"></image>
+     <view class="imgbox">
+        <!-- 存放上传的图片的盒子 -->
+        <block wx:for="{{images}}" wx:key="this">
+            <view class="add">
+              <!-- 图片缩略图  -->
+              <!-- <image src="{{item}}" mode="aspectFill" data-idx="{{index}}" bindtap="handleImagePreview"></image> -->
+              <!-- 移除图片的按钮  -->
+              <view class="delete" data-idx="{{index}}" bindtap="removeImage">删除</view>
+            </view>
+        </block>
+        <image src="/static/images/addimg.png" bindtap="chooseImage"></image>
+      </view>
+     </view>
+
+  
+     <view class="phoneCs">
+       <image src="/imgs/icon/username.png" class="ph"></image>
+       <input bindinput="updateUname" value="{{uname}}" placeholder="input user name" />
+     </view>
+  
+     <view class="passwordCs">
+       <image src="/imgs/icon/password.png" class="ps"></image>
+       <input bindinput="updateUpassword" value="{{upassword}}" password placeholder="input password" />
+     </view>
+  
+     <view class="passwordCheckCs">
+       <image src="/imgs/icon/password.png" class="ps"></image>
+       <input value="{{checkUpassword}}" bindinput="updateCheckUpassword" password placeholder="password again" />
+     </view>
+  
+     <view class="realnameCs">
+       <image src="/imgs/icon/realname.png" class="ph"></image>
+       <input bindinput="updateUrealname" value="{{urealname}}" placeholder="input real name" />
+     </view>
+
+     <view class="genderCs">
+       <image src="/imgs/icon/gender.png" class="ph"></image>
+       <input bindinput="updateUgender" value="{{ugender}}" placeholder="male/female" />
+     </view>
+
+     <view class="birthdayCs">
+       <image src="/imgs/icon/birthday.png" class="ph"></image>
+       <input bindinput="updateUbirthday" value="{{ubirthday}}" placeholder="birthday y-m-d" />
+     </view>
+
+     <view class="telCs">
+       <image src="/imgs/icon/tel.png" class="ph"></image>
+       <input bindinput="updateUtel" value="{{utel}}" placeholder="telephone numb" />
+     </view>
+
+     <view class="identityCs">
+       <image src="/imgs/icon/identity.png" class="ph"></image>
+       <input bindinput="updateUidentity" value="{{uidentity}}" placeholder="input ID" />
+     </view>
+
+
+     <!-- 注册按钮 -->
+     <view class="zhuce" bindtap="doRegister">
+       <button class="btn-dl" type="primary">register</button>
+     </view>
+     <view class="clear" bindtap="doClear">
+       <button class="btn-dl" type="primary">clear information</button>
+     </view>
+  
+     <!-- 协议区  xieyi -->
+     <view class="xieyi">
+       <checkbox class="isXY"></checkbox>
+       <view class="text-xy">同意小程序的《使用协议》</view>
+     </view>
+   </view>
+
+     <view class="msgC" style="color: red; background-color: white; margin-top: 20rpx;">{{checkUpasswordMsg==''?' ':checkUpasswordMsg}}</view>
+
+ </view>

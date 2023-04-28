@@ -1,0 +1,39 @@
+<!--pages/login/login.wxml-->
+
+<view class="v1">
+ <!-- v2父容器  子view使用绝对布局 -->
+   <view class="v2">
+     <view class="dltext">Login</view>
+  
+     <view class="phoneCs">
+       <image src="/imgs/icon/username.png" class="ph"></image>
+       <input bindinput="updateUname" placeholder="input user name" />
+     </view>
+  
+     <view class="passwordCs">
+       <image src="/imgs/icon/password.png" class="ps"></image>
+       <input bindinput="updateUpassword" type="{{canSee?'text':'password'}}" placeholder="input password" />
+       <image src="{{canSee?'/imgs/icon/eye_open.png':'/imgs/icon/eye_close.png'}}" bindtap="changeSee" class="eye"></image>
+     </view>
+  
+     <!-- 注册 和忘记密码  -->
+     <view class="zhuce">
+       <navigator bindtap="doRegister">立即注册</navigator>
+       <navigator url="../forgetPassword/forgetPassword" bindtap="clearLoginMsg">忘记密码?</navigator>
+     </view>
+  
+     <!-- 登录按钮 -->
+     <view class="denglu" bindtap="doLogin">
+       <button class="btn-dl" type="primary">登录</button>
+     </view>
+  
+     <!-- 协议区  xieyi -->
+     <view class="xieyi">
+       <checkbox class="isXY"></checkbox>
+       <view class="text-xy">同意小程序的《使用协议》</view>
+     </view>
+   </view>
+
+  <view style="color: red; background-color: white; margin-top: 20rpx;">{{loginMsg}}</view>
+
+ </view>

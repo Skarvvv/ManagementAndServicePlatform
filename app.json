@@ -1,0 +1,49 @@
+{
+  "pages":[
+    "pages/login/login",
+    "pages/register/register",
+    "pages/forgetPassword/forgetPassword",
+    "pages/main/main",
+    "pages/home/home",
+    "pages/newsDetail/newsDetail",
+    "pages/functions/functions",
+    "pages/person/person",
+    "pages/updateInfotmation/updateInformation",
+    "pages/updatePassword/updatePassword",
+    "pages/symptomReport/symptomReport",
+    "pages/statusInspection/statusInspection",
+    "pages/followUpSchedule/followUpSchedule",
+    "pages/medicationReminder/medicationReminder",
+    "pages/addMedicine/addMedicine",
+    "pages/riskWarning/riskWarning",
+    "pages/userFeedback/userFeedback"
+    
+  ],
+  "window":{
+    "backgroundTextStyle": "dark",
+    "backgroundColor": "#888",
+    "navigationBarBackgroundColor": "#ada",
+    "navigationBarTitleText": "Management & Service",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": false
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/home/home",
+      "text": "news",
+      "iconPath": "imgs/tabBars/main_n.png",
+			"selectedIconPath": "imgs/tabBars/main_y.png"
+    },{
+      "pagePath": "pages/functions/functions",
+      "text": "functions",
+      "iconPath": "imgs/tabBars/functions_n.png",
+			"selectedIconPath": "imgs/tabBars/functions_y.png"
+    },{
+      "pagePath": "pages/person/person",
+      "text": "person",
+      "iconPath": "imgs/tabBars/person_n.png",
+			"selectedIconPath": "imgs/tabBars/person_y.png"
+    }]
+  }
+}

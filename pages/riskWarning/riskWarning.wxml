@@ -1,0 +1,15 @@
+<!--pages/riskWarning/riskWarning.wxml-->
+
+<view class="titleView">Risk Warning</view>
+
+<view class="shop-item" wx:for="{{riskWarnings}}" wx:key="rid">
+  <view class="thumb">
+    <image src="{{item.mimage}}"></image>
+  </view>
+  <view class="info">
+    <text class="shop-title">{{item.rtitle}} </text>
+    <text> time：{{item.rtime}} </text>
+    <text> doctor-name：{{item.drealname}} </text>
+    <text> description：{{item.rcontent}} </text>
+  </view>
+</view>

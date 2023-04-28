@@ -1,0 +1,16 @@
+<!--pages/addMedicine/addMedicine.wxml-->
+<view class="titleView">To Add Medicine</view>
+
+<button bindtap="submit">submit</button>
+
+<view class="shop-item" wx:for="{{medicines}}" wx:key="mid" bindtap="doChoose" data-index="{{item.mid-1}}" style="background-color: {{styles[medicineChosen[item.mid-1]]}};">
+  <view class="thumb">
+    <image src="{{item.mimage}}"></image>
+  </view>
+  <view class="info">
+    <text class="shop-title">{{item.mname}}</text>
+    <text>times：{{item.mtimes}}</text>
+    <text>dosage：{{item.mdosage}}</text>
+    <text>description：{{item.mdescription}}</text>
+  </view>
+</view>
